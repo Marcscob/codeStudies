@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>callback is awsome</h1>
+
+    <script>
+        /* sintaxe: addEventListener(event, callback) obs.: use arrow function like shown bellow*/
+
+        /* a callback function is a function that is passed as an argument to another function.*/
+
+        let h1 = document.querySelector('h1')
+        h1.addEventListener("click", (data) => {
+            console.log(data)
+        })
+
+        /*Remember our addEventListener() method. We passed our callback function (i.e. our event handler) inside of this function. And remember, a callback function is executed inside of the function it was passed into.*/
+    </script>
+</body>
+
+</html>

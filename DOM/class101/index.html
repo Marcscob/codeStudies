@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>cloneNode()</title>
+    <style>
+      body {
+        background-color: rgb(0, 0, 39);
+        color: azure;
+        font-size: 65px;
+      }
+    </style>
+
+    <body>
+      <h1>the cloneNode() method</h1>
+
+      <p class='cloneP'>Lorem, ipsum dolor sit amet </p>
+    
+
+      <span>text from a single span</span>
+
+      <script>
+        let dady6 = document.querySelector('body');
+        let p1 = document.querySelector('.cloneP');
+        const clonning = () => {
+          let cloned = p1.cloneNode(false);//onn/off child text node
+          dady6.appendChild(cloned);
+        }
+       // setInterval(clonning, 10000)
+        
+      </script>
+    </body>
+  </head>
+</html>

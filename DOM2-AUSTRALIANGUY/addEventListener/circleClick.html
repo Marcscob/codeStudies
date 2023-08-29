@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html {
+            background: radial-gradient(gray, black);
+            color: white;
+            padding-top: 50px;
+            text-align: center;
+
+        }
+
+        .main {
+            font-weight: bold;
+            font-size: 2em;
+            margin-bottom: 30px;
+        }
+
+        .wrapper {
+
+            margin: 0 auto;
+            height: 12em;
+            width: 10em;
+        }
+
+        /*div class circle*/
+        #circle {
+
+            width: 200px;
+            height: 200px;
+            border-radius: 100%;
+            background-color: 'white';
+            cursor: pointer;
+
+
+
+        }
+
+        #note {
+            margin-top: 20px;
+            color: rgb(245, 228, 228);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">Click the circle bellow</div>
+
+    <div class="wrapper">
+
+
+
+        <div id="circle">
+
+
+        </div>
+
+        <div id="note"></div>
+
+        <script>
+
+            /*insert text bellow circle by js and circle itself dinamically, and of course a listener to the circle and a handler to change the color of the circle randomly*/
+            
+            
+            
+            document.getElementById('note').textContent = 'dom manipulation '
+
+            let circle = document.getElementById('circle')
+            
+            window.onload = circle.style.backgroundColor = 'white'
+            
+            circle.addEventListener('click', changeColor => {
+                let colorSort = Math.floor(Math.random() * 16777216).toString(16)
+                colorSort = colorSort.padStart(6, '0')
+                circle.style.backgroundColor = "#" + colorSort
+
+            })
+
+
+            // or
+            // function changeColor(){
+            //     let colorSort = Math.floor(Math.random() * 16777216).toString(16)
+            //     circle.style.backgroundColor = "#" + colorSort
+
+
+            // }
+
+            
+
+
+
+
+//16777216
+
+
+
+        </script>
+</body>
+
+</html>

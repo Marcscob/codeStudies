@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body {
+    background-color: rgb(28, 1, 48);
+    color: beige;
+    
+   }
+
+   h1{
+    margin-left: 48px;
+   }
+
+   li {
+    background-color: rgb(88, 122, 55);
+    color: antiquewhite;
+    border-radius: 15px;
+    border: 2px solid whitesmoke;
+    padding: 15px;
+    font-size: 25px;
+    width: 300px;
+    list-style-type: none;
+    margin: 8px;
+   }
+</style>
+<body>
+  <h1>cool friends</h1>
+  <ul class="list1">
+
+  </ul>
+  <script>
+    const friends = ['dog', 'cat', 'eagle', 'mouse', 'girafe', 'elephant']
+
+    let ulElement = document.querySelector('.list1');
+
+    let it1 = document.createElement('li');
+    it1.textContent=friends[0];
+    ulElement.appendChild(it1);
+
+    let it2 = document.createElement('li');
+    it2.textContent=friends[1];
+    ulElement.appendChild(it2);
+
+     let it3 = document.createElement('li');
+    it3.textContent=friends[2];
+    ulElement.appendChild(it3);
+
+     let it4 = document.createElement('li');
+    it4.textContent=friends[3];
+    ulElement.appendChild(it4);
+
+     let it5 = document.createElement('li');
+    it5.textContent=friends[4];
+    ulElement.appendChild(it5);
+
+     let it6 = document.createElement('li');
+    it6.textContent=friends[5];
+    ulElement.appendChild(it6);
+
+   
+  </script>
+</body>
+</html>

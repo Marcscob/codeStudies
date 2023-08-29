@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title>removeElement</title>
+    <style>
+      body{
+        background-color:rgb(10, 10, 10) ;
+        color: antiquewhite;
+        font-size: 60px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>here's an h1</h1>
+    <h3>hey! I'm an h3</h3>
+    
+    <script>
+      let newP4 = document.createElement('p');
+      newP4.textContent='newp4'
+      let body5 = document.querySelector('body')
+      body5.appendChild(newP4)
+
+      //removing newP4 pointing to his parent
+      //body5.removeChild(newP4)
+
+      //but if we don't know who the parent is
+      //newP4.parentNode.removeChild(newP4)
+
+      //newest method even more slimpler
+      newP4.remove()
+
+
+      
+    </script>
+   
+  </body>
+</html>

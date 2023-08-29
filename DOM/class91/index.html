@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>Create Element</title>
+    <style>
+      body{
+        background-color: rgb(0, 245, 245);
+        padding: 30px;
+      }
+      h1 {
+        color: rgb(255, 149, 11);
+        font-size: 72px;
+        text-decoration: underline;
+      }
+
+      p{
+        font-size: 60px;
+        color: aliceblue;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>am I real?</h1>
+
+    <script>
+      const newP = document.createElement('p');//element created
+      let bodyNewP = document.querySelector('body')//parent selected
+      bodyNewP.appendChild(newP)//new element attached to parent
+      newP.textContent='test'//content added to 'p'
+
+      //now lets use insertBefore()
+      const newp2 = document.createElement('p')
+      let scriptElement = document.querySelector('script')
+      bodyNewP.insertBefore(newp2, scriptElement)
+      newP2.textContent='test2'
+    </script>
+  </body>
+
+</html>

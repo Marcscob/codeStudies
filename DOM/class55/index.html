@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>this is an element node</h1>
+    this is a text node, all by its lonesome self
+    <!--comment node-->
+    <p>also an element node</p>
+
+    <!-- <ul>
+        <li>ham</li>
+        <li>pom</li>
+        <li>kazam</li>
+        <li>kaboom</li>
+    </ul> -->
+
+    <ul>
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+    </ul>
+
+    <script>
+        // let listItems = document.getElementsByTagName('li');
+        // console.log(listItems)
+        // console.log(listItems.length)
+
+        // //edit the dom
+        // listItems[0].parentNode.appendChild(document.createElement('li'))
+        // console.log(listItems.length)
+        // console.log(listItems)
+
+        //node list
+        //grab all list tags
+        // let grabList = document.querySelectorAll('li');//returns a node list
+        // console.log(grabList)
+
+        //proving the nodeList is static
+        // grabList[0].parentNode.appendChild(document.createElement('li'))
+        // console.log(grabList)//does not increased the list
+
+        //requerying the dom
+        // grabList = document.querySelectorAll('li');
+        // console.log(grabList)
+        
+        let listItems2 = document.getElementsByTagName('li');
+        //getting ul
+        console.log(listItems2[0].parentNode); //parentNode 
+        console.log(listItems2)
+        //it's an HTMLCollection, wich is a coolection of DOM nodes. While a NodeList can contain any node type, an HTMLCollection only contain element nodes. So, an HTMLCollection is a collection of nodes. It's not a node itself.
+        //can't use parentNode method on HTMLCollection.So, have to use the [0] to access elements inside the collection.
+        //we can say that pretty much everything in the DOM is a node - the <p> tag, the <div> tag, your comments and even that awesome block of text you write. 
+
+
+    </script>
+
+</body>
+</html>

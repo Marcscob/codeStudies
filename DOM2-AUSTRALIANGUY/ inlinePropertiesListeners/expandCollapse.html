@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+        background-color: #eee;
+    }
+
+    #content {
+        width: 400px;
+        background-color: #fff;
+        padding: 20px;
+        padding-top: 0;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: #444;
+        margin: 0 auto;
+        max-height: 140px;
+        overflow: hidden;
+        transition: max-height 0.7s;
+        
+
+    }
+
+    #show-more {
+        background-color: rgb(33, 33, 193);
+        color: #fff;
+        /*a tag need to be block to accept margin*/
+        display: block;
+        font-weight: 600;
+        padding: 10px;
+        /*a tag need width or will ocupies all screen width*/
+        width: 140px;
+        border-radius: 5px;
+        /*center the text in the button*/
+        text-align: center;
+        font-size: 20px;
+        cursor: pointer;
+
+        margin: 20px auto;
+
+    }
+
+    #content.open {
+        max-height: 1000px;
+        transition: max-height 2s;
+
+    }
+</style>
+
+<body>
+    <div id="content">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eligendi cum vel modi aspernatur, dolores,
+            provident, cupiditate tempora maxime expedita iste molestiae facilis aperiam debitis! Vel dicta dolore
+            necessitatibus ab.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eligendi cum vel modi aspernatur, dolores,
+            provident, cupiditate tempora maxime expedita iste molestiae facilis aperiam debitis! Vel dicta dolore
+            necessitatibus ab
+        </p>
+    </div>
+    <a id="show-more">show more</a>
+    <script>
+        let content = document.getElementById('content')
+        let button = document.getElementById('show-more')
+
+        button.onclick = () => {
+
+            if (content.className==''){
+                content.className = "open"
+                button.innerHTML='collape now'
+            }else  {
+                content.className=''
+                button.innerHTML='expand'
+                
+            }
+
+
+
+
+        }
+    </script>
+</body>
+
+</html>

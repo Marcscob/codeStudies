@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>traverse the DOM</title>
+
+    <style>
+        * {
+            border: 2px solid #e3aa6e;
+            padding: 15px;
+            margin: 15px;
+        }
+        body {
+            max-width: 600px;
+            font-family: sans-serif;
+            color: #3f2801;
+        }
+    </style>
+</head>
+<body>
+     <main>
+        <h1>Welcome</h1>
+        <div id="wrapper">
+            <h2 class="h2 subheading">Traversing the DOM</h2> 
+            <p>how do we do it?</p>
+            <p>stick around and I'll show you</p>
+        </div>
+
+        <div id="wrapper-2">
+            <h2 class="joke">joke of the day</h2>
+            <p>what do you call a fish width no eyes?...a fish</p>
+        </div>
+        <ul>
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ul>
+     </main>
+
+     <script>
+        //accessing grandpa of the wrapper-2 div
+        //select the div 
+        //let grandPa = $0
+        //grandPa.parentNode.parentNode
+        //returns the body
+        //changing the body background colour
+        /*grandPa.parentNode.parentNode.style.backgroundColour = 'yellow'*/
+        //same for childNodes
+        //getElementByTagName and then navigate to parents and childs 
+        //and the same between siblings using methods previousSibling and nextSibling
+         //method children[0]
+         //ex. body.children[0]
+         //compare children and childNodes
+         /*let ul = document.getElementsByTagName('ul')[0];
+         //returns element 
+         <ul>
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ul>
+        on the other hand...
+        ul.childNodes
+        NodeList(7) [text, li, text, li, text, li, text]
+        ul.firstElementChild.style.backgroundColor='gray'
+        let ulChildren = ul.children
+        HTMLCollection(3) [li, li, li]*/
+        /*for(i=0;i<ulChildren.length;i++){
+        let li = ulChildren[i];
+        li.style.border='5px dashed red' 
+        }
+        or
+        for(i=0;i<ulChildren.length;i++){
+        let li = ulChildren[i];
+        li.style.border='5px dashed red' 
+        li.style.color='orange'
+        li.style.backgroundColor='gray'
+        }
+
+        let bodyChildren=document.body.children
+        HTMLCollection(3) [main, script, script]
+
+        let bodyChildren = document.body.children;
+        bodyChildren
+        HTMLCollection(3) [main, script, script]
+        for (i=0;i<bodyChildren.length; i++){
+        let bodyFont = bodyChildren[i];
+        bodyFont.style.fontFamily ='helvetica'
+        }
+
+        let mainChildren = document.getElementsByTagName('main')[0].children
+        for(i=0;i<mainChildren.length;i++){
+            let mainColor = mainChildren[i]
+            mainColor.style.border ='4px solid green'
+        }
+
+        next and previusSiblings get each node on the way;
+        but 
+        */
+            
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>createAppend</title>
+    <style>
+      body{
+        background-color: black;
+        color: whitesmoke;
+        font-size: 60px;
+      }
+    </style>
+  </head>
+<body>
+  <h1>create paragraph</h1>
+
+  <script>
+    let newPar = document.createElement('p');
+    let dady = document.querySelector('body');
+    dady.appendChild(newPar);
+    newPar.textContent="that's me!"
+
+    let newH3 = document.createElement('h3');
+    newH3.textContent='new h3'
+    let dady2 = document.querySelector('body');
+    let scriptElement2 = document.getElementsByTagName('script')[0]
+    dady2.insertBefore(newH3, scriptElement2)
+    
+    let newSpan = document.createElement('span')
+    newSpan.textContent='new span';
+    let h1Element = document.querySelector('h1');
+    let dady3 = document.querySelector('body');
+    let afterH1 = h1Element.nextSibling;
+    dady3.insertBefore(newSpan, afterH1);
+
+  </script>
+</body>
+</html>

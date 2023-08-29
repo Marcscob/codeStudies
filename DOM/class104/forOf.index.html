@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body {
+    background-color: rgb(44, 32, 0);
+    color: rgb(250, 238, 229);
+  }
+
+  li {
+    width: 250px;
+    margin: 8px;
+    color: rgb(255, 253, 251);
+    background-color: coral;
+    border-radius: 15px;
+    border: 2px solid whitesmoke;
+    padding: 15px;
+    font-size: 25px;
+    list-style-type: none;
+  }
+</style>
+<body>
+  <h1>using forOf loop</h1>
+  <ul class="list2"></ul>
+
+  <script>
+    const friends = ['dog', 'cat', 'eagle', 'mouse', 'girafe', 'elephant']
+    
+    let ulElement = document.querySelector('.list2')
+
+    for (friend of friends) {
+      let items = document.createElement('li')
+      items.textContent=friend;
+      ulElement.appendChild(items);
+    }
+    
+    /*
+    for of sintax: for (iterator of object) {}
+    */
+  </script>
+ 
+</body>
+</html>

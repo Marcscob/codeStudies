@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      //multiply 3 arguments
+      const mul = (a, b, c) => {
+        if (a === undefined || b === undefined || c === undefined) {
+          return `insert all data`;
+        }
+        return a * b * c;
+      };
+      console.log(mul(2,2,3)) 
+
+      //refatorar para 1 if
+
+      
+
+      const y = (w) => {
+        if (w[2] === false) {
+          if ("b" === w[0]) {
+            if (w[1] === 3) {
+              console.log("rodou o if");
+            }
+          }
+        }
+      };
+
+      const a = "b";
+      const b = false;
+      const c = 3;
+      y([a, c, b]);
+
+    </script>
+  </body>
+</html>
